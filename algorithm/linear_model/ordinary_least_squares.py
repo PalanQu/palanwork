@@ -3,9 +3,10 @@ from sklearn.datasets import make_regression
 from sklearn.linear_model import LinearRegression
 
 
-def standard_lr(x, y):
+def standard_ols(x, y):
     model = LinearRegression()
     model.fit(x, y)
+    print(model.coef_)
 
 def gradient_descent(x, y):
     m = x.shape[0]
@@ -22,7 +23,8 @@ def gradient_descent(x, y):
         error = np.sum(np.square(np.dot(x, updated_paras) - y))
         if (error < accept_error):
             break
-        print(iter_num, "\t" , error)    
+        # print(iter_num, "\t" , error)    
+    print(updated_paras)
 
 def normal_equation(x, y):
     x = np.mat(np.insert(x, 0, 1, axis=1))
@@ -33,9 +35,9 @@ def normal_equation(x, y):
 
 def main():
     x, y, coef = make_regression(n_samples=200, n_features=5, n_informative=50 ,random_state=0, coef=True)
-    normal_equation(x, y)
-    # gradient_descent(x, y)
-    standard_lr(x, y)
+    # normal_equation(x, y)
+    gradient_descent(x, y)
+    standard_ols(x, y)
 
 if __name__ == '__main__':
     main()
