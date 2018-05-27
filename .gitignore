@@ -1,1 +1,27 @@
 .vscode
+/bin/
+resource/directly/
+resource/demo.json
+resource/Market.json
+resource/tmp/*.json
+resource/tmp/*.xlsx
+.idea
+target/
+.settings
+.DS_Store
+.gradle
+*-a.json
+*.iml
+*.tar.gz
+
+# TODO (zhongming): These are python-specific ignore settings.  __pycache__
+# should be ignored in developer's global gitignore file, i.e., usually
+# $HOME/.gitignore but not here.  All others should be removed.
+env
+env35
+env36
+*.egg-info/
+*.egg
+build/
+__pycache__
+settings_local.py
