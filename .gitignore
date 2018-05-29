@@ -13,6 +13,7 @@ target/
 *-a.json
 *.iml
 *.tar.gz
+data/*
 
 # TODO (zhongming): These are python-specific ignore settings.  __pycache__
 # should be ignored in developer's global gitignore file, i.e., usually
