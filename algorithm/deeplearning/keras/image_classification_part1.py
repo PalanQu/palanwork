@@ -137,7 +137,6 @@ Let's code up the architecture. We will stack 3 {convolution + relu + maxpooling
 
 from keras.models import Model
 from keras import layers
-from keras import backend as K
 
 # Configure the TF backend session
 
