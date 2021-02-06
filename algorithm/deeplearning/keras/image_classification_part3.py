@@ -201,6 +201,7 @@ model.compile(loss='binary_crossentropy',
               optimizer=SGD(lr=0.00001, momentum=0.9),
               metrics=['acc'])
 
+
 """Now let's retrain the model. We'll train on all 2000 images available, for 50 epochs, and validate on all 1,000 test images. (This may take 15-20 minutes to run.)"""
 
 history = model.fit_generator(
